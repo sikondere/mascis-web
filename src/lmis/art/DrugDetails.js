@@ -66,22 +66,22 @@ function DrugDetailsGrid(props) {
                     editSettings={editOptions}
                     groupSettings={groupOptions}>
                     <ColumnsDirective>
-                        <ColumnDirective field='recommendedFormulations' width='100'/>
-                        <ColumnDirective field='drugFormulations' width='300' textAlign="Left"/>
-                        <ColumnDirective field='basicUnit' width='100' textAlign="Left"/>
-                        <ColumnDirective field='openingBalance' width='100' textAlign="Left"/>
-                        <ColumnDirective field='quantityReceived' width='100'/>
-                        <ColumnDirective field='ancConsumption' width='100'/>
-                        <ColumnDirective field='artConsumption' width='100'/>
-                        <ColumnDirective field='lossesAdjustments' width='100'/>
-                        <ColumnDirective field='closingBalance' width='100'/>
-                        <ColumnDirective field='monthsOfStockOnHand' customAttributes={{class:'customcss'}} width='100'/>
-                        <ColumnDirective field='quantityRequiredCurrentPatients' customAttributes={{class:'customcss2'}} width='100'/>
-                        <ColumnDirective field='estimatedNewPatients' width='100'/>
-                        <ColumnDirective field='estimatedPositivePregnant' width='100'/>
-                        <ColumnDirective field='drugsRequiredNewPatients' customAttributes={{class:'customcss'}} width='100'/>
-                        <ColumnDirective field='totalDrugsRequired' customAttributes={{class:'customcss2'}} width='100'/>
-                        <ColumnDirective field='notes' width='100'/>
+                        <ColumnDirective field='recommendedFormulations' headerText='Recommended Formulations' width='100'/>
+                        <ColumnDirective field='drugFormulations' headerText='Drug Formulations' width='300' textAlign="Left"/>
+                        <ColumnDirective field='basicUnit' headerText='Basic Unit' width='120' textAlign="Left"/>
+                        <ColumnDirective field='openingBalance' headerText='Opening Balance' width='110' textAlign="Left"/>
+                        <ColumnDirective field='quantityReceived' headerText='Quantity Received' width='110'/>
+                        <ColumnDirective field='ancConsumption' headerText='ANC Consumption' width='110'/>
+                        <ColumnDirective field='artConsumption' headerText='ART Consumption' width='110'/>
+                        <ColumnDirective field='lossesAdjustments' headerText='Losses / Adjustments' width='110'/>
+                        <ColumnDirective field='closingBalance' headerText='Closing Balance' width='110'/>
+                        <ColumnDirective field='monthsOfStockOnHand' headerText='Months Of Stock' customAttributes={{class:'customcss'}} width='110'/>
+                        <ColumnDirective field='quantityRequiredCurrentPatients' headerText='Quantity Current Patients' customAttributes={{class:'customcss2'}} width='110'/>
+                        <ColumnDirective field='estimatedNewPatients' headerText='Estimated New Patients' width='110'/>
+                        <ColumnDirective field='estimatedPositivePregnant' headerText='Estimated +Ve Pregnant' width='110'/>
+                        <ColumnDirective field='drugsRequiredNewPatients' headerText='Rrugs New Patients' customAttributes={{class:'customcss'}} width='110'/>
+                        <ColumnDirective field='totalDrugsRequired' headerText='Total Drugs' customAttributes={{class:'customcss2'}} width='110'/>
+                        <ColumnDirective field='notes' headerText='Notes' width='300'/>
                     </ColumnsDirective>
                     <Inject services={[Group, Edit]}/>
                 </GridComponent>

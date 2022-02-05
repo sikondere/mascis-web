@@ -61,9 +61,9 @@ function PaediatricPatientsGrid(props) {
                     groupSettings={groupOptions}>
                     <ColumnsDirective>
                         <ColumnDirective field='line' width='100' textAlign="Right"/>
-                        <ColumnDirective field='name' width='100' textAlign="Left"/>
-                        <ColumnDirective field='no_existing' width='80'/>
-                        <ColumnDirective field='no_new' width='80'/>
+                        <ColumnDirective field='name' headerText='' width='100' textAlign="Left"/>
+                        <ColumnDirective field='no_existing' headerText='No. Existing'  width='80' />
+                        <ColumnDirective field='no_new' headerText='No. New' width='80'/>
                     </ColumnsDirective>
                     <Inject services={[Group, Edit]}/>
                 </GridComponent>

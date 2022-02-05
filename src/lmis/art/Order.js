@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 
 import DrugDetails from './DrugDetails'
 import OrderHeader from './OrderHeader'
@@ -32,6 +32,9 @@ export default function Order(props) {
                     <OtherPatients />
                 </Grid>
             </Grid>
+            {/* <Grid item xs={-2}>
+                <Button>Save</Button>
+            </Grid> */}
         </Grid>
     )
 }
