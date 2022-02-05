@@ -48,3 +48,18 @@
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+
+
+.e-grid .e-rowcell.customcss{
+  background-color: #2382c3;
+}
+.e-grid .e-rowcell.customcss2{
+  background-color: #e2e461;
+}
+/* 
+.e-grid .e-headercell.customcss{
+  background-color: #2382c3;
+  color: white;
+  font-family: 'Bell MT';
+  font-size: 20px;
+} */

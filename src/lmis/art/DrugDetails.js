@@ -66,21 +66,21 @@ function DrugDetailsGrid(props) {
                     editSettings={editOptions}
                     groupSettings={groupOptions}>
                     <ColumnsDirective>
-                        <ColumnDirective field='recommendedFormulations' width='100' textAlign="Right"/>
+                        <ColumnDirective field='recommendedFormulations' width='100'/>
                         <ColumnDirective field='drugFormulations' width='300' textAlign="Left"/>
-                        <ColumnDirective field='basicUnit' width='100' textAlign="Right"/>
-                        <ColumnDirective field='openingBalance' width='100' textAlign="Right"/>
+                        <ColumnDirective field='basicUnit' width='100' textAlign="Left"/>
+                        <ColumnDirective field='openingBalance' width='100' textAlign="Left"/>
                         <ColumnDirective field='quantityReceived' width='100'/>
                         <ColumnDirective field='ancConsumption' width='100'/>
                         <ColumnDirective field='artConsumption' width='100'/>
                         <ColumnDirective field='lossesAdjustments' width='100'/>
                         <ColumnDirective field='closingBalance' width='100'/>
-                        <ColumnDirective field='monthsOfStockOnHand' width='100'/>
-                        <ColumnDirective field='quantityRequiredCurrentPatients' width='100'/>
+                        <ColumnDirective field='monthsOfStockOnHand' customAttributes={{class:'customcss'}} width='100'/>
+                        <ColumnDirective field='quantityRequiredCurrentPatients' customAttributes={{class:'customcss2'}} width='100'/>
                         <ColumnDirective field='estimatedNewPatients' width='100'/>
                         <ColumnDirective field='estimatedPositivePregnant' width='100'/>
-                        <ColumnDirective field='drugsRequiredNewPatients' width='100'/>
-                        <ColumnDirective field='totalDrugsRequired' width='100'/>
+                        <ColumnDirective field='drugsRequiredNewPatients' customAttributes={{class:'customcss'}} width='100'/>
+                        <ColumnDirective field='totalDrugsRequired' customAttributes={{class:'customcss2'}} width='100'/>
                         <ColumnDirective field='notes' width='100'/>
                     </ColumnsDirective>
                     <Inject services={[Group, Edit]}/>
