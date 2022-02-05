@@ -1,3 +1,76 @@
+export const artDrugs = [
+    { 
+        order: 1,
+        drugId: 1,
+        recommendedFormulations: 'ADULT -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Tenofovir/Lamivudine/Efavirenz (TDF/3TC/EFV) 300/300mg/600mg',
+        basicUnit:'Pack of 30',
+    },
+    { 
+        order: 2,
+        drugId: 2,
+        recommendedFormulations: 'ADULT -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Zidovudine /Lamivudine/Nevirapine (AZT/3TC/NVP) 300mg/150mg/200mg',
+        basicUnit:'Pack of 30',
+    },
+    { 
+        order: 3,
+        drugId: 3,
+        recommendedFormulations: 'ADULT -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Tenofovir/Lamivudine (TDF/3TC) 300mg/300mg',
+        basicUnit:'Pack of 30',
+    },
+    { 
+        order: 4,
+        drugId: 4,
+        recommendedFormulations: 'ADULT -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Zidovudine/Lamivudine (AZT/3TC)300mg/150mg',
+        basicUnit:'Pack of 30',
+    },
+    { 
+        order: 5,
+        drugId: 5,
+        recommendedFormulations: 'ADULT -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Abacavir/Lamivudine (ABC/3TC) 600mg/300mg',
+        basicUnit:'Pack of 30',
+    },
+    { 
+        order: 6,
+        drugId: 6,
+        recommendedFormulations: 'PAEDIATRIC -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Abacavir/Lamivudine (ABC/3TC) 60mg/30mg',
+        basicUnit:'Pack of 60',
+    },
+    { 
+        order: 7,
+        drugId: 7,
+        recommendedFormulations: 'PAEDIATRIC -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Zidovudine/Lamivudine/Nevirapine (AZT/3TC/NVP) 60mg/30mg/50mg',
+        basicUnit:'Pack of 60',
+    },
+    { 
+        order: 8,
+        drugId: 8,
+        recommendedFormulations: 'PAEDIATRIC -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Zidovudine/Lamivudine (AZT/3TC) 60mg/30mg',
+        basicUnit:'Pack of 60',
+    },
+    { 
+        order: 9,
+        drugId: 9,
+        recommendedFormulations: 'PAEDIATRIC -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Efavirenz (EFV) 200mg',
+        basicUnit:'Pack of 60',
+    },
+    { 
+        order: 10,
+        drugId: 10,
+        recommendedFormulations: 'PAEDIATRIC -- RECOMMENDED FORMULATIONS',
+        drugFormulations: 'Nevirapine (NVP) 50mg',
+        basicUnit:'Pack of 60',
+    },
+]
+
 export const drugs = [
     { 
         order: 1,

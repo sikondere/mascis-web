@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {drugs} from './data'
+// import {drugs} from './data'
 
 export const artOrderSlice = createSlice({
     name: 'artOrder',
     initialState: {
-        orderHeader: {},
-        drugDetails: drugs,
-        adultPatients: [{}],
-        padiatricPatients: [{}],
-        fluconazolePatients: [{}],
-        otherPatients: [{}],
+        orderHeader: null,
+        drugDetails: null,
+        adultPatients: null,
+        padiatricPatients: null,
+        fluconazolePatients: null,
+        otherPatients: null,
     },
     reducers: {
         newDrugDetails: (state, action) => {
@@ -17,7 +17,7 @@ export const artOrderSlice = createSlice({
         },
         updateDrugDetails: (state, action) => {
             state.drugDetails.map(row => {
-                if (row['order'] === action.payload['order']) {
+                if (row['drugId'] === action.payload['drugId']) {
                     row[action.payload.column] = action.payload.value
                     return row
                 }
