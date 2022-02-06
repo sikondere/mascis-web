@@ -66,7 +66,7 @@ function DrugDetailsGrid(props) {
                     editSettings={editOptions}
                     groupSettings={groupOptions}>
                     <ColumnsDirective>
-                        <ColumnDirective field='recommendedFormulations' headerText='Recommended Formulations' width='100'/>
+                        <ColumnDirective field='recommendedFormulations' headerText='' width='100'/>
                         <ColumnDirective field='drugFormulations' headerText='Drug Formulations' width='300' textAlign="Left"/>
                         <ColumnDirective field='basicUnit' headerText='Basic Unit' width='120' textAlign="Left"/>
                         <ColumnDirective field='openingBalance' headerText='Opening Balance' width='110' textAlign="Left"/>
