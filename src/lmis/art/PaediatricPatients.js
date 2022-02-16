@@ -11,26 +11,17 @@ const { Grid } = require("@mui/material")
 export default function PaediatricPatients(props) {
     
     const dispatch = useDispatch()
-    const data = useSelector((state) => state.artOrder.paediatricPatients)
+    const order = useSelector((state) => state.artOrder.paediatricPatients)
     useEffect(() => {
-        let newOrder = [...artRegimens]
-        newOrder = newOrder.filter((row) => {
-            if(row['patient'] === 'Paediatric') {
-                return row
-            }
-        })
-        newOrder.map((row) => {
-            row['no_existing'] = null
-            row['no_new'] = null
-            return row
-        })
-        newOrder.sort((a, b) => a.order - b.order)
-        dispatch(newPaediatricPatients(newOrder))
-    }, [])
- 
-    return (
-        <PaediatricPatientsGrid order={data} />
-    )
+        dispatch(newPaediatricPatients([...artRegimens]))
+    }, [dispatch])
+    
+    if(order !== null)
+        return (
+            <PaediatricPatientsGrid order={order} />
+        )
+    else
+        return null
 }
 
 function PaediatricPatientsGrid(props) {
@@ -61,7 +52,7 @@ function PaediatricPatientsGrid(props) {
                     groupSettings={groupOptions}>
                     <ColumnsDirective>
                         <ColumnDirective field='line' headerText='' width='100' textAlign="Right"/>
-                        <ColumnDirective field='name' headerText='' width='100' textAlign="Left"/>
+                        <ColumnDirective field='name' customAttributes={{class:'customcss4'}} headerText='' width='100' textAlign="Left"/>
                         <ColumnDirective field='no_existing' headerText='No. Existing'  width='80' />
                         <ColumnDirective field='no_new' headerText='No. New' width='80'/>
                     </ColumnsDirective>

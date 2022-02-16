@@ -11,21 +11,17 @@ const { Grid } = require("@mui/material")
 export default function FluconazolePatients(props) {
     
     const dispatch = useDispatch()
-    const data = useSelector((state) => state.artOrder.fluconazolePatients)
+    const order = useSelector((state) => state.artOrder.fluconazolePatients)
     useEffect(() => {
-        let newOrder = [...fluconazole]
-        newOrder.map((row) => {
-            row['no_existing'] = null
-            row['no_new'] = null
-            return row
-        })
-        newOrder.sort((a, b) => a.order - b.order)
-        dispatch(newFluconazolePatients(newOrder))
-    }, [])
+        dispatch(newFluconazolePatients([...fluconazole]))
+    }, [dispatch])
     
-    return (
-        <PatientsGrid order={data} />
-    )
+    if(order !== null)
+        return (
+            <PatientsGrid order={order} />
+        )
+    else
+        return null
 }
 
 function PatientsGrid(props) {
@@ -52,7 +48,7 @@ function PatientsGrid(props) {
                     textWrapSettings={{wrapMode: 'Both'}}
                     editSettings={editOptions}>
                     <ColumnsDirective> 
-                        <ColumnDirective field='condition' width='200' headerText='Condition' textAlign="Left"/>
+                        <ColumnDirective field='condition' customAttributes={{class:'customcss4'}} width='200' headerText='Condition' textAlign="Left"/>
                         <ColumnDirective field='no_existing' headerText='No. Existing'  width='80' />
                         <ColumnDirective field='no_new' headerText='No. New' width='80'/>
                     </ColumnsDirective>

@@ -1,4 +1,5 @@
 import { Button, Container, Grid } from '@mui/material'
+import { useDispatch } from 'react-redux'
 
 import DrugDetails from './DrugDetails'
 import OrderHeader from '../OrderHeader'
@@ -10,8 +11,8 @@ import OtherPatients from './OtherPatients'
 export default function Order(props) {
 
     return (
-        // <Container  maxWidth="xl">
-            // <br />
+        <Container  maxWidth="xl">
+           
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <OrderHeader />
@@ -38,6 +39,6 @@ export default function Order(props) {
                     <Button variant='contained'>Save</Button>
                 </Grid>
             </Grid>
-        // </Container>
+        </Container>
     )
 }

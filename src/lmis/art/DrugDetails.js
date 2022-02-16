@@ -12,31 +12,18 @@ export default function DrugDetails(props) {
     
     const dispatch = useDispatch()
     const order = useSelector((state) => state.artOrder.drugDetails)
-    useEffect(() => {
-        let newOrder = [...artDrugs]
-        newOrder.map((row) => {
-            row['openingBalance'] = null
-            row['quantityReceived'] = null
-            row['ancConsumption'] = null
-            row['artConsumption'] = null
-            row['lossesAdjustments'] = null
-            row['closingBalance'] = null
-            row['monthsOfStockOnHand'] = null
-            row['quantityRequiredCurrentPatients'] = null
-            row['estimatedNewPatients'] = null
-            row['estimatedPositivePregnant'] = null
-            row['drugsRequiredNewPatients'] = null
-            row['totalDrugsRequired'] = null
-            row['notes'] = null
-            return row
-        })
-        newOrder.sort((a, b) => a.order - b.order)
-        dispatch(newDrugDetails(newOrder))
-    }, [])
     
-    return (
-        <DrugDetailsGrid order={order} />
-    )
+    useEffect(() => {
+        const data = [...artDrugs]
+        dispatch(newDrugDetails(data))
+    }, [dispatch])
+    
+    if(order !== null)
+        return (
+            <DrugDetailsGrid order={order} />
+        )
+    else
+        return null
 }
 
 function DrugDetailsGrid(props) {
@@ -67,8 +54,8 @@ function DrugDetailsGrid(props) {
                     groupSettings={groupOptions}>
                     <ColumnsDirective>
                         <ColumnDirective field='recommendedFormulations' headerText='' width='100'/>
-                        <ColumnDirective field='drugFormulations' headerText='Drug Formulations' width='300' textAlign="Left"/>
-                        <ColumnDirective field='basicUnit' headerText='Basic Unit' width='120' textAlign="Left"/>
+                        <ColumnDirective field='drugFormulations' customAttributes={{class:'customcss3'}}  headerText='Drug Formulations' width='300' textAlign="Left"/>
+                        <ColumnDirective field='basicUnit' customAttributes={{class:'customcss3'}}  headerText='Basic Unit' width='120' textAlign="Left"/>
                         <ColumnDirective field='openingBalance' headerText='Opening Balance' width='110' textAlign="Left"/>
                         <ColumnDirective field='quantityReceived' headerText='Quantity Received' width='110'/>
                         <ColumnDirective field='ancConsumption' headerText='ANC Consumption' width='110'/>
