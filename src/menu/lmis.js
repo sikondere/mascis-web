@@ -29,8 +29,8 @@ export default function LMIS(props) {
             {openLMIS ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={openLMIS} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} onClick={() => navigate('/lmis')}>
+                <List component="span" disablePadding>
+                <ListItemButton sx={{ pl: 4 }} onClick={() => navigate('/lmis/dashboard')}>
                     <ListItemIcon>
                     <StarBorder />
                     </ListItemIcon>

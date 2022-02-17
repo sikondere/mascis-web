@@ -10,6 +10,7 @@ import store from './redux/store'
 import ART from './lmis/art/Order'
 import HIVTestKits from './lmis/hivtestkits/Order'
 import Home from './lmis/Home'
+import Dashboard from './lmis/dashboard'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.render(
             <Route path='lmis' element={<Home />}>
               <Route path='art' element={<ART />} />
               <Route path='hivtestkits' element={<HIVTestKits />} />
+              <Route path='dashboard' element={<Dashboard />} />
             </Route>
           </Route>
         </Routes>
