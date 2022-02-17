@@ -11,7 +11,7 @@ import OtherPatients from './OtherPatients'
 export default function Order(props) {
 
     return (
-        <Container  maxWidth="xl">
+        // <Container  maxWidth="xl">
            
             <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -39,6 +39,6 @@ export default function Order(props) {
                     <Button variant='contained'>Save</Button>
                 </Grid>
             </Grid>
-        </Container>
+        // </Container>
     )
 }
