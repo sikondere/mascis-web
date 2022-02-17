@@ -51,8 +51,14 @@
 
 
 .e-grid .e-rowcell.customcss{
-  background-color: #68a6cf;
+  background-color: #adc7d8;
 }
 .e-grid .e-rowcell.customcss2{
-  background-color: #f85151;
+  background-color: #9bbfc2;
+}
+.e-grid .e-rowcell.customcss3{
+  background-color: #fae1e1;
+}
+.e-grid .e-rowcell.customcss4{
+  background-color: #eef5eb;
 }
