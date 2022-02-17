@@ -12,7 +12,26 @@ export const artOrderSlice = createSlice({
     },
     reducers: {
         newDrugDetails: (state, action) => {
-            state.drugDetails = action.payload
+            let newOrder = [...action.payload]
+            newOrder.map((row) => {
+                let newRow = Object.assign({}, row)
+                newRow['openingBalance'] = null
+                newRow['quantityReceived'] = null
+                newRow['ancConsumption'] = null
+                newRow['artConsumption'] = null
+                newRow['lossesAdjustments'] = null
+                newRow['closingBalance'] = null
+                newRow['monthsOfStockOnHand'] = null
+                newRow['quantityRequiredCurrentPatients'] = null
+                newRow['estimatedNewPatients'] = null
+                newRow['estimatedPositivePregnant'] = null
+                newRow['drugsRequiredNewPatients'] = null
+                newRow['totalDrugsRequired'] = null
+                newRow['notes'] = null
+                return newRow
+            })
+            newOrder.sort((a, b) => a.order - b.order)
+            state.drugDetails = newOrder
         },
         updateDrugDetails: (state, action) => {
             state.drugDetails.map(row => {
@@ -26,7 +45,18 @@ export const artOrderSlice = createSlice({
             })
         },
         newAdultPatients: (state, action) => {
-            state.adultPatients = action.payload
+            let newOrder = [...action.payload]
+            newOrder = newOrder.filter((row) =>  row['patient'] === 'Adult' )
+            newOrder.map((row) => {
+                let newRow = Object.assign({}, row)
+                newRow['no_existing'] = null
+                newRow['no_new'] = null
+                newRow['preg_existing'] = null
+                newRow['preg_new'] = null
+                return newRow
+            })
+            newOrder.sort((a, b) => a.order - b.order)
+            state.adultPatients = newOrder
         },
         updateAdultPatients: (state, action) => {
             state.adultPatients.map(row => {
@@ -40,7 +70,16 @@ export const artOrderSlice = createSlice({
             })
         },
         newPaediatricPatients: (state, action) => {
-            state.paediatricPatients = action.payload
+            let newOrder = [...action.payload]
+            newOrder = newOrder.filter((row) => row['patient'] === 'Paediatric')
+            newOrder.map((row) => {
+                let newRow = Object.assign({}, row)
+                newRow['no_existing'] = null
+                newRow['no_new'] = null
+                return newRow
+            })
+            newOrder.sort((a, b) => a.order - b.order)
+            state.paediatricPatients = newOrder
         },
         updatePaediatricPatients: (state, action) => {
             state.paediatricPatients.map(row => {
@@ -54,7 +93,15 @@ export const artOrderSlice = createSlice({
             })
         },
         newFluconazolePatients: (state, action) => {
-            state.fluconazolePatients = action.payload
+            let newOrder = [...action.payload]
+            newOrder.map((row) => {
+                let newRow = Object.assign({}, row)
+                newRow['no_existing'] = null
+                newRow['no_new'] = null
+                return newRow
+            })
+            newOrder.sort((a, b) => a.order - b.order)
+            state.fluconazolePatients = newOrder
         },
         updateFluconazolePatients: (state, action) => {
             state.fluconazolePatients.map(row => {
@@ -68,7 +115,15 @@ export const artOrderSlice = createSlice({
             })
         },
         newOtherPatients: (state, action) => {
-            state.otherPatients = action.payload
+            let newOrder = [...action.payload]
+            newOrder.map((row) => {
+                let newRow = Object.assign({}, row)
+                newRow['no_existing'] = null
+                newRow['no_new'] = null
+                return newRow
+            })
+            newOrder.sort((a, b) => a.order - b.order)
+            state.otherPatients = newOrder
         },
         updateOtherPatients: (state, action) => {
             state.otherPatients.map(row => {
