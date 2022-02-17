@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Order from './lmis/art/Order';
+import { Outlet, Link } from 'react-router-dom'
+import Menu from './menu/menu'
 
 function App() {
   return (
     <div className="App">
-      <Order />
+      <Menu />
+      
     </div>
   );
 }
