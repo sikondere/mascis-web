@@ -43,7 +43,6 @@ function ItemDetailsGrid(props) {
             <Grid item xs={12}>
                 <GridComponent 
                     dataSource={props.order} 
-                    allowGrouping={true} 
                     ref={grid}
                     cellSave={cellSave} 
                     allowTextWrap={true}

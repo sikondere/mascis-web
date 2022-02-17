@@ -20,7 +20,7 @@ export default function Order(props) {
     const regimens = useSelector((state) => state.artRegimens.regimens)
 
     return (
-        <Container maxWidth='xl'>
+        // <Container maxWidth='xl'>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <OrderHeader />
@@ -32,6 +32,6 @@ export default function Order(props) {
                     <UseSummary data={regimens} />
                 </Grid>
             </Grid>
-        </Container>
+        // </Container>
     )
 }
