@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import store from './redux/store'
-import ART from './lmis/art/OrderList'
+import ART from './lmis/art/List'
 import ARTOrder from './lmis/art/Order'
 import HIVTestKits from './lmis/hivtestkits/OrderList'
 import HIVTestKitsOrder from './lmis/hivtestkits/Order'
