@@ -26,7 +26,7 @@ export default function Dashboard(props) {
           <Typography gutterBottom variant="h5" component="span">
             ART
           </Typography>
-          <Typography component={'span'} variant="body2" color="text.secondary">
+          <Typography  variant="body2" color="text.secondary">
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>

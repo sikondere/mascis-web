@@ -7,7 +7,8 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import store from './redux/store'
-import ART from './lmis/art/Order'
+import ART from './lmis/art/OrderList'
+import ARTOrder from './lmis/art/Order'
 import HIVTestKits from './lmis/hivtestkits/Order'
 import Home from './lmis/Home'
 import Dashboard from './lmis/dashboard'
@@ -20,6 +21,7 @@ ReactDOM.render(
           <Route path='/' element={<App />}>
             <Route path='lmis' element={<Home />}>
               <Route path='art' element={<ART />} />
+              <Route path='art/order' element={<ARTOrder />} />
               <Route path='hivtestkits' element={<HIVTestKits />} />
               <Route path='dashboard' element={<Dashboard />} />
             </Route>
