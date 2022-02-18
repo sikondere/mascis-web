@@ -9,7 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import store from './redux/store'
 import ART from './lmis/art/OrderList'
 import ARTOrder from './lmis/art/Order'
-import HIVTestKits from './lmis/hivtestkits/Order'
+import HIVTestKits from './lmis/hivtestkits/OrderList'
+import HIVTestKitsOrder from './lmis/hivtestkits/Order'
 import Home from './lmis/Home'
 import Dashboard from './lmis/dashboard'
 
@@ -23,6 +24,7 @@ ReactDOM.render(
               <Route path='art' element={<ART />} />
               <Route path='art/order' element={<ARTOrder />} />
               <Route path='hivtestkits' element={<HIVTestKits />} />
+              <Route path='hivtestkits/order' element={<HIVTestKitsOrder />} />
               <Route path='dashboard' element={<Dashboard />} />
             </Route>
           </Route>
