@@ -117,7 +117,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="span">
-            MASCIS
+            LMIS
           </Typography>
         </Toolbar>
       </AppBar>

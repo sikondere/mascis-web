@@ -3,6 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import { Fragment } from 'react'
 import Fab from '@mui/material/Fab'
 import AddIcon from '@mui/icons-material/Add'
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 import OrderHeader from '../OrderHeader'
 import ListGrid from './ListGrid'
@@ -24,7 +25,9 @@ export default function Orders(props) {
                         direction="row"
                         justifyContent="flex-start"
                         alignItems="flex-end">
-                        <Button variant='contained'>Search</Button>
+                        <Button aria-label="search" color='success' variant="contained" startIcon={ <SearchRoundedIcon />}>
+                           Search
+                        </Button>
                     </Grid>
                     <Grid item xs={10}  container
                         direction="row-reverse"

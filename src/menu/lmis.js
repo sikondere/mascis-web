@@ -27,7 +27,7 @@ export default function LMIS(props) {
                 <ListItemIcon>
                     <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="LMIS" />
+                <ListItemText primary="Facility Orders" />
                 {openLMIS ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
             </Tooltip>
